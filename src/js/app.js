@@ -115,11 +115,13 @@ $(document).ready(function () {
 
     $(".list-order").append(productHTML);
     updateTotalHarga();
+    updateBadge();
   });
 
   $(document).on("click", ".btn-remove", function () {
     $(this).closest(".product").remove();
     updateTotalHarga();
+    updateBadge();
   });
 
   $(document).on("input", ".price-value", function () {
@@ -137,6 +139,11 @@ $(document).ready(function () {
     });
 
     $("#total").text("Rp. " + newTotalHarga.toLocaleString("id-ID") + ",00");
+  }
+
+  function updateBadge() {
+    let totalItems = $(".product").length;
+    $(".quantity").text(totalItems);
   }
 
   // Sweet Alert Success form contact
@@ -221,7 +228,6 @@ $(document).ready(function () {
   });
 
   function sendWhatsAppMessage(message) {
-
     let phoneNumber = "6285819030185";
 
     // Format URL untuk pesan WhatsApp
