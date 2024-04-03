@@ -2,7 +2,7 @@ var dataMinuman = {
   klasik_kopi: [
     {
       id: 1,
-      images: "../../img/menu/Minuman/Klasik_Kopi/Espresso.jpeg",
+      images: "/img/menu/Minuman/Klasik_Kopi/Espresso.jpeg",
       nama: "Espresso",
       harga: 20000,
       detail: "70% Arabika dan 30% Robusta",
