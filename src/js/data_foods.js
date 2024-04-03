@@ -46,28 +46,28 @@ var dataMakanan = {
   poultry: [
     {
       id: 1,
-      images: "img/menu/Makanan/poultry/Ayam_Bakar_Taliwang.jpeg",
+      images: "img/menu/Makanan/Poultry/Ayam_Bakar_Taliwang.jpeg",
       nama: "Ayam Bakar <br> Taliwang",
       harga: 65000,
       detail: "Ayam, Bumbu Bakar, Kemangi, dan Sambal",
     },
     {
       id: 2,
-      images: "img/menu/Makanan/poultry/Ayam_Belacan.jpeg",
+      images: "img/menu/Makanan/Poultry/Ayam_Belacan.jpeg",
       nama: "Ayam <br> Balacan",
       harga: 37000,
       detail: "Ayam dan Bumbu Balacan (Udang Rebon yang di Fermentasi)",
     },
     {
       id: 3,
-      images: "img/menu/Makanan/poultry/Ayam_Betutu.jpg",
+      images: "img/menu/Makanan/Poultry/Ayam_Betutu.jpg",
       nama: "Ayam <br> Betutu",
       harga: 65000,
       detail: "Ayam, Bumbu Bali, Kemangi, dan Sambel Matah",
     },
     {
       id: 4,
-      images: "img/menu/Makanan/poultry/Bebek_Cabe_Hijau.jpeg",
+      images: "img/menu/Makanan/Poultry/Bebek_Cabe_Hijau.jpeg",
       nama: "Bebek <br> Cabe Hijau",
       harga: 80000,
       detail: "Bebek, Bumbu Cabe Hijau, dan Rebusan Daun Singkong",
