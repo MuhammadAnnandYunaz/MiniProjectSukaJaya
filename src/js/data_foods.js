@@ -38,7 +38,7 @@ var dataMakanan = {
     },
     {
       id: 6,
-      images: "../../img/menu/Makanan/Beef/Paru_Goreng_Sambal_Bawang.jpg",
+      images: "img/menu/Makanan/Beef/Paru_Goreng_Sambal_Bawang.jpg",
       nama: "Paru Goreng Sambal Bawang",
       harga: 38000,
       detail: "Paru, Sambal Bawang, dan Bumbu Rahasia",
