@@ -138,6 +138,28 @@ $(document).ready(function () {
 
     $("#total").text("Rp. " + newTotalHarga.toLocaleString("id-ID") + ",00");
   }
+
+  // Sweet Alert Success form contact
+  $("#formContact #btnContact").click(function () {
+    let name = $("#name").val();
+    let email = $("#email").val();
+    let message = $("#message").val();
+
+    if (name == "" || email == "" || message == "") {
+      Swal.fire({
+        title: "Pesan Kosong",
+        text: "Tolong, Masukkan nama, email dan Pesan anda!!",
+        icon: "warning",
+        button: "Ok"
+      });
+    } else {
+      Swal.fire({
+        title: "Selamat",
+        text: "Pesan Anda Berhasil Terkirim!😍😉",
+        icon: "success",
+      });
+    }
+  });
 });
 
 // Card Merge Slide
