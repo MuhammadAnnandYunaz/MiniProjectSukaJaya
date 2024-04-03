@@ -856,7 +856,7 @@
             </div>
             <div class="col">
               <h5 class="mb-3 fw-bold">Contact Form</h5>
-              <form action="https://formsubmit.co/da4e6a217c0f26549cddd37909cf2c5d" method="POST" id="formContact">
+              <form action="https://formsubmit.co/niken100974@gmail.com" method="POST" id="formContact">
                 <div class="mb-2">
                   <input type="text" name="name" id="name" class="form-control form-control-sm p-2"
                     placeholder="Masukkan Nama Lengkap Anda" autocomplete="off" required
@@ -876,7 +876,8 @@
                     oninput="this.setCustomValidity('')"></textarea>
                 </div>
                 <div class="mb-2">
-                  <button type="submit" id="btnContact" class="btn btn-success btn-sm rounded-1" style="width: 100px;">Kirim</button>
+                  <button type="submit" id="btnContact" class="btn btn-success btn-sm rounded-1"
+                    style="width: 100px;">Kirim</button>
                 </div>
               </form>
             </div>
@@ -1042,7 +1043,8 @@
       </div>
       <div class="checkout border-top border-black px-3 py-1">
         <p class="fw-bold mb-1">Total: <span id="total"></span></p>
-        <button type="button" class="btn btn-sm btn-success w-100" id="checkoutBtn">
+        <button type="button" class="btn btn-sm btn-success w-100" id="checkoutBtn" data-bs-toggle="modal"
+          data-bs-target="#namaModal">
           Checkout
           <i class="bi bi-arrow-right ms-2"></i></button>
       </div>
@@ -1064,6 +1066,26 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pesanan ke Whatsapp-->
+  <div class="modal fade" id="namaModal" tabindex="-1" aria-labelledby="namaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body pb-0">
+          <label for="namaPengguna">Masukkan Nama Anda:</label>
+          <input type="text" class="form-control form-control-sm mb-3 mt-1" id="namaPengguna"
+            placeholder="Masukkan Nama" autocomplete="off" required>
+          <!-- Tampilkan detail pesanan di sini -->
+          <p id="detailPesanan"></p>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Tutup</button>
+          <button type="button" class="btn btn-success btn-sm" id="kirimPesananBtn"><i
+              class="bi bi-whatsapp me-2"></i>Kirim Pesanan</button>
         </div>
       </div>
     </div>

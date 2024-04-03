@@ -150,7 +150,7 @@ $(document).ready(function () {
         title: "Pesan Kosong",
         text: "Tolong, Masukkan nama, email dan Pesan anda!!",
         icon: "warning",
-        button: "Ok"
+        button: "Ok",
       });
     } else {
       Swal.fire({
@@ -160,6 +160,82 @@ $(document).ready(function () {
       });
     }
   });
+
+  $(document).on("click", "#checkoutBtn", function () {
+    // Membuat template teks pesanan
+    let pesananText = "";
+    $(".product").each(function () {
+      let productName = $(this).find(".cartPrice h6").text();
+      let productPrice = $(this).find(".price").text();
+      let productQuantity = $(this).find(".price-value").val();
+
+      pesananText +=
+        productName + " - " + productPrice + " x " + productQuantity + "<br>";
+    });
+
+    pesananText += "<hr>";
+    // Menambahkan total harga ke dalam pesanan
+    let totalHarga = $("#total").text();
+    pesananText += "<b>Total Harga:</b> " + totalHarga;
+
+    // Memperbarui detail pesanan di dalam modal
+    $("#detailPesanan").html(pesananText);
+
+    // Tampilkan modal
+    $("#namaModal").modal("show");
+  });
+
+  $(document).on("click", "#kirimPesananBtn", function () {
+    // Ambil nama pengguna
+    let atasNama = $("#namaPengguna").val();
+
+    if (atasNama !== "") {
+      let pesananText = "Pesanan atas nama *" + atasNama + "*:\n";
+      pesananText += "-----------------------------------------\n";
+
+      $(".product").each(function () {
+        let productName = $(this).find(".cartPrice h6").text();
+        let productQuantity = $(this).find(".price-value").val();
+
+        pesananText += productName + " - " + productQuantity + "x\n";
+      });
+
+      pesananText += "-----------------------------------------\n";
+      // Menambahkan total harga ke dalam pesanan
+      let totalHarga = $("#total").text();
+      pesananText += "*Total Harga :* " + totalHarga;
+
+      // Mengirim pesanan ke WhatsApp menggunakan API
+      sendWhatsAppMessage(pesananText);
+
+      // Menutup modal setelah pesanan terkirim
+      $("#namaModal").modal("hide");
+
+      // Refresh halaman setelah pesanan terkirim
+      setTimeout(function () {
+        window.location.reload();
+      }, 5000); // Ganti angka 5000 dengan waktu yang sesuai (dalam milidetik)
+    } else {
+      alert("Nama tidak boleh kosong.");
+    }
+  });
+
+  function sendWhatsAppMessage(message) {
+
+    let phoneNumber = "6285819030185";
+
+    // Format URL untuk pesan WhatsApp
+    let whatsappURL =
+      "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    // Buka URL di jendela baru
+    window.open(whatsappURL);
+
+    // Mengarahkan kembali dan me-refresh halaman setelah pesan terkirim
+    setTimeout(function () {
+      window.location.reload();
+    }, 5000);
+  }
 });
 
 // Card Merge Slide
