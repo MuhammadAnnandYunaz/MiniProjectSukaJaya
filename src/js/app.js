@@ -99,7 +99,7 @@ $(document).ready(function () {
     let productHTML = `
     <div class="product">
       <div class="d-flex align-items-center border-bottom border-black py-2">
-        <img src="${productImage}" alt="" class="img-fluid d-block rounded">
+        <img src="${productImage}" alt="${productName}" class="img-fluid d-block rounded">
         <div class="cartPrice mx-2">
           <h6 class="mb-1 fs-8">${productName}</h6>
           <p class="m-0 fs-8">Rp. <span class="price">${productPrice}</span>,00</p>
