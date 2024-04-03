@@ -30,7 +30,8 @@ var dataMakanan = {
     },
     {
       id: 5,
-      images: "../../img/menu/Makanan/Beef/Daging_Sapi_Bumbu_Roedjak.jpg",
+      images:
+        "https://github.com/BearAzul/projectcollaboration_sukajaya/blob/kelompok2/img/menu/Makanan/Beef/Daging_Sapi_Bumbu_Roedjak.jpg?raw=true",
       nama: "Daging Sapi Bumbu Roedjak",
       harga: 56000,
       detail: "Daging Sapi, Rempah-Rempah, dan Bumbu Rahasia",
