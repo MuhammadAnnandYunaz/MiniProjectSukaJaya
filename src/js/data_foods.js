@@ -30,15 +30,14 @@ var dataMakanan = {
     },
     {
       id: 5,
-      images:
-        "https://github.com/BearAzul/projectcollaboration_sukajaya/blob/kelompok2/img/menu/Makanan/Beef/Daging_Sapi_Bumbu_Roedjak.jpg?raw=true",
+      images: "img/menu/Makanan/Beef/Daging_Sapi_Bumbu_Roedjak.jpg",
       nama: "Daging Sapi Bumbu Roedjak",
       harga: 56000,
       detail: "Daging Sapi, Rempah-Rempah, dan Bumbu Rahasia",
     },
     {
       id: 6,
-      images: "/img/menu/Makanan/Beef/Paru_Goreng_Sambal_Bawang.jpg",
+      images: "img/menu/Makanan/Beef/Paru_Goreng_Sambal_Bawang.jpg",
       nama: "Paru Goreng Sambal Bawang",
       harga: 38000,
       detail: "Paru, Sambal Bawang, dan Bumbu Rahasia",
@@ -234,8 +233,7 @@ var dataMakanan = {
     },
     {
       id: 3,
-      images:
-        "img/menu/Makanan/Kudapan_Gurih/Tahu_Kencot_Asam_Manis.jpeg",
+      images: "img/menu/Makanan/Kudapan_Gurih/Tahu_Kencot_Asam_Manis.jpeg",
       nama: "Tahu Kencot Asam Manis",
       harga: 23000,
       detail: "Tahu Pong, Cabe, Gula Jawa, dan Bumbu Rahasia",
