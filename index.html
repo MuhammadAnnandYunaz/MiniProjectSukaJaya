@@ -1037,11 +1037,11 @@
           <button type="button" class="btn btn-sm btn-close" id="closeOrder"></button>
           <p class="fw-bold fs-7 m-0">Pesanan Anda</p>
         </div>
-        <div class="list-order d-grid gap-2 overflow-y-scroll pe-3" style="max-height: 450px;">
+        <div class="list-order d-grid gap-2 overflow-y-scroll pe-3" style="max-height: 430px;">
           <!-- Daftar Pesanan -->
         </div>
       </div>
-      <div class="checkout border-top border-black px-3 py-1">
+      <div class="checkout border-top border-black px-3 py-1 bg-smooth-light">
         <p class="fw-bold mb-1">Total: <span id="total"></span></p>
         <button type="button" class="btn btn-sm btn-success w-100" id="checkoutBtn" data-bs-toggle="modal"
           data-bs-target="#namaModal">
@@ -1076,11 +1076,17 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body pb-0">
-          <label for="namaPengguna">Masukkan Nama Anda:</label>
-          <input type="text" class="form-control form-control-sm mb-3 mt-1" id="namaPengguna"
+          <label for="namaPengguna" class="fs-7 fw-bold">Masukkan Nama Anda:</label>
+          <input type="text" class="form-control form-control-sm mb-2 mt-1 fs-7" id="namaPengguna"
             placeholder="Masukkan Nama" autocomplete="off" required>
-          <!-- Tampilkan detail pesanan di sini -->
-          <p id="detailPesanan"></p>
+          <label for="alamat" class="fs-7 fw-bold">Masukkan Alamat Anda:</label>
+          <textarea name="alamat" id="alamat" cols="30" rows="3" class="form-control form-control-sm mb-3 fs-7"
+            placeholder="Kosongkan alamat, dengan '-'. Jika anda memesan ditempat" required></textarea>
+          <p class="mb-1 fw-bold fs-7">Detail Pesanan Anda:</p>
+          <p id="detailPesanan" class="fs-7 text-justify">
+            <!-- Tampilkan detail pesanan di sini -->
+
+          </p>
         </div>
         <div class="modal-footer border-0 pt-0">
           <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Tutup</button>

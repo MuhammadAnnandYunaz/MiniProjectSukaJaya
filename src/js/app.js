@@ -105,7 +105,7 @@ $(document).ready(function () {
           <p class="m-0 fs-8">Rp. <span class="price">${productPrice}</span>,00</p>
         </div>
         <div class="d-flex align-items-center gap-2 ms-auto">
-          <input type="number" class="form-control form-control-sm bg-transparent border border-black price-value" min="1" value="${productQuantity}">
+          <input type="number" class="form-control form-control-sm bg-transparent border border-black price-value" min="1" max="50" value="${productQuantity}">
           <button type="button" class="btn btn-sm btn-danger px-1 py-0 btn-remove">
             <i class="bi bi-x"></i>
           </button>
@@ -195,6 +195,7 @@ $(document).ready(function () {
   $(document).on("click", "#kirimPesananBtn", function () {
     // Ambil nama pengguna
     let atasNama = $("#namaPengguna").val();
+    let alamatPelanggan = $("#alamat").val();
 
     if (atasNama !== "") {
       let pesananText = "Pesanan atas nama *" + atasNama + "*:\n";
@@ -210,20 +211,19 @@ $(document).ready(function () {
       pesananText += "-----------------------------------------\n";
       // Menambahkan total harga ke dalam pesanan
       let totalHarga = $("#total").text();
-      pesananText += "*Total Harga :* " + totalHarga;
+      pesananText += "*Total Harga :* " + totalHarga + "\n\n";
+      pesananText += "*Alamat :* \n" + alamatPelanggan;
 
       // Mengirim pesanan ke WhatsApp menggunakan API
       sendWhatsAppMessage(pesananText);
 
       // Menutup modal setelah pesanan terkirim
       $("#namaModal").modal("hide");
-
-      // Refresh halaman setelah pesanan terkirim
-      setTimeout(function () {
-        window.location.reload();
-      }, 5000); // Ganti angka 5000 dengan waktu yang sesuai (dalam milidetik)
     } else {
-      alert("Nama tidak boleh kosong.");
+      Swal.fire({
+        text: "Masukkan Nama dan Alamat Anda Sebelum Memesan!",
+        icon: "question",
+      });
     }
   });
 

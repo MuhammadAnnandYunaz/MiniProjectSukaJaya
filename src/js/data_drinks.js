@@ -328,7 +328,7 @@ $(document).ready(function () {
             </div>
             <div class="card-text d-flex justify-content-center align-items-center gap-2">
               <p class="m-0 price">Rp. <span class="price">${drink.harga}</span>,00</p>/
-              <input type="number" name="price-value" class="form-control form-control-sm bg-smooth-light border border-black px-1 price-value" style="width: 50px;" value="1" min="1">
+              <input type="number" name="price-value" class="form-control form-control-sm bg-smooth-light border border-black px-1 price-value" style="width: 50px;" value="1" min="1" max="50">
             </div>
           </div>
           <div class="card-button d-flex gap-2">
